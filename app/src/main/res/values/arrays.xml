@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pen_colors">
+        <item>红色</item>
+        <item>蓝色</item>
+        <item>绿色</item>
+        <item>黑色</item>
+    </string-array>
+
+    <string-array name="pen_widths">
+        <item>2</item>
+        <item>5</item>
+        <item>10</item>
+    </string-array>
+
+
+
+</resources>

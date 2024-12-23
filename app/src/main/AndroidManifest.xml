@@ -13,22 +13,27 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/title_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PictureReader"
+        android:theme="@style/Theme.MyPdfPlayer"
         tools:targetApi="31">
 
 
 
-        <activity android:name=".PdfViewerActivity" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
         <activity android:name=".FileAdapter" />
-
         <activity android:name=".PdfCanvasView"/>
-        <activity android:name="PdfCanvasView2"/>
-
-
-
-
+        <activity android:name=".PdfViewerActivity"/>
 
         <activity
             android:name=".MainActivity"
@@ -39,10 +44,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-
-
     </application>
 
 </manifest>

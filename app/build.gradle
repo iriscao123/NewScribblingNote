@@ -3,17 +3,23 @@ plugins {
 }
 
 android {
-    namespace 'com.example.picturereader'
+    namespace 'com.example.mypdfplayer'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.picturereader"
+        applicationId "com.example.mypdfplayer"
         minSdk 24
         targetSdk 33
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    sourceSets {
+        main {
+            assets.srcDirs = ['src/main/assets']
+        }
     }
 
     buildTypes {
@@ -27,6 +33,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
+
 
 dependencies {
 

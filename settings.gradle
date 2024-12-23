@@ -2,6 +2,19 @@ pluginManagement {
     repositories {
         google()
         mavenCentral()
+
+        maven {
+            url 'https://maven.aliyun.com/repository/public/'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/central'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/google'
+        }
+        mavenLocal()
+
+        jcenter()
         gradlePluginPortal()
     }
 }
@@ -10,7 +23,15 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven {
+            url 'https://maven.aliyun.com/repository/central'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/google'
+        }
+        jcenter()
     }
 }
-rootProject.name = "PictureReader"
+rootProject.name = "MyPdfPlayer"
 include ':app'

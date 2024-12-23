@@ -12,9 +12,15 @@
         android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" 欢迎来到绘本世界"
+        android:text="笔记"
         android:layout_gravity="center"
         android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/moveToNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 
 
 

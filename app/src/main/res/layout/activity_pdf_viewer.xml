@@ -1,52 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".PdfViewerActivity">
 
-    <ImageView
-        android:id="@+id/btReturn"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/reture"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
 
-    <com.github.barteksc.pdfviewer.PDFView
-        android:id="@+id/pdfView"
+        android:background="#CCCCCC"
+        android:padding="8dp">
+
+        <ImageButton
+            android:id="@+id/btnPen"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:background="@drawable/ic_pen"
+            android:text="画笔" />
+
+        <Spinner
+            android:id="@+id/penColorSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/pen_colors" />
+
+        <Spinner
+            android:id="@+id/penWidthSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/pen_widths" />
+
+        <ImageButton
+            android:id="@+id/btnEraser"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/ic_eraser"
+            android:text="橡皮擦" />
+
+
+
+        <ImageButton
+            android:id="@+id/btnZoomIn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/ic_zoomin"/>
+
+        <ImageButton
+            android:id="@+id/btnZoomOut"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/ic_zoomout"/>
+
+        <ImageButton
+            android:id="@+id/btnUndo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/ic_undo" />
+
+        <ImageButton
+            android:id="@+id/btnSave"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/ic_save"
+            />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/pdfContainer"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:gravity="center"
+        android:layout_weight="1">
 
+        <!-- 用于显示 PDF 页面并支持缩放和绘图 -->
+        <com.example.mypdfplayer.PdfCanvasView
+            android:id="@+id/pdfCanvasView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:gravity="center">
+
+        android:background="#CCCCCC"
+        android:padding="8dp">
 
         <ImageButton
-            android:id="@+id/btnPlayPause"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/btnPrevious"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_page_previous"
+             />
 
-            android:layout_gravity="center"
-            android:background="@null"
-            android:src="@drawable/ic_play" />
+        <ImageButton
+            android:id="@+id/btnNext"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="300dp"
+            android:background="@drawable/ic_page_next"
+             />
 
 
-        <ImageView
-            android:id="@+id/btnStop"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
 
-            android:layout_marginStart="16dp"
-            android:src="@drawable/ic_stop"
-            />
 
     </LinearLayout>
 
 
 
 
-
 </LinearLayout>
+
