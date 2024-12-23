@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+
+        <!-- PDF 封面图像 -->
+        <ImageView
+            android:id="@+id/pdfCoverImage"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:contentDescription="@null"
+          android:src="@drawable/r1"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <!-- PDF 标题 -->
+        <TextView
+            android:id="@+id/pdfTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="文件名" />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/downloadButton"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:src="@drawable/download" />-->
+
+
+        </LinearLayout>
+
+
+
+</LinearLayout>
